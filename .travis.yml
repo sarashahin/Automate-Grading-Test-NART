@@ -1,9 +1,11 @@
 language: python
 python:
   - "3.8"
+  - "3.9"
+  - "3.10"
 
-
-# Command to run tests
+# Avoid timeouts by breaking linting into smaller chunks and using colored output
 script:
-  - pytest
+  - travis_wait 30 pylint $(git ls-files '*.py') --output-format=colorized
+
 

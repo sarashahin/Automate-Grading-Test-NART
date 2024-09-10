@@ -1,4 +1,3 @@
-# tests/test_basic.py
 
 """
 Basic tests for the project.

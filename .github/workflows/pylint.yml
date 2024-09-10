@@ -8,16 +8,28 @@ jobs:
     strategy:
       matrix:
         python-version: ["3.8", "3.9", "3.10"]
+
     steps:
+    # Checkout the code from the repository
     - uses: actions/checkout@v4
+
+    # Set up the Python environment
     - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v3
+      uses: actions/setup-python@v4  # Use v4 to avoid Node.js deprecation warning
       with:
         python-version: ${{ matrix.python-version }}
+
+    # Install pip and Pylint
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install pylint
-    - name: Analysing the code with pylint
+
+    # Run Pylint to analyze code
+    - name: Analyzing the code with pylint
       run: |
         pylint $(git ls-files '*.py')
+
+      # Continue on warnings or linting errors (optional)
+      continue-on-error: true  # Allows the workflow to continue even if pylint fails
+

@@ -4,8 +4,12 @@ python:
   - "3.9"
   - "3.10"
 
-# Avoid timeouts by breaking linting into smaller chunks and using colored output
+install:
+  - python -m pip install --upgrade pip
+  - pip install pylint  # Install pylint
+
 script:
-  - travis_wait 30 pylint $(git ls-files '*.py') --output-format=colorized
+  - travis_wait 30 pylint $(git ls-files '*.py') --output-format=colorized  # Run pylint with colorized output
+
 
 

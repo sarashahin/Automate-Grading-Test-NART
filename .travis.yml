@@ -1,8 +1,7 @@
 language: python
 python:
   - "3.8"
-  - "3.9"
-  - "3.10"
+  - "3.9"  # Remove 3.10 if not necessary
 
 install:
   - python -m pip install --upgrade pip
@@ -10,6 +9,7 @@ install:
 
 script:
   - travis_wait 30 pylint $(git ls-files '*.py') --output-format=colorized  # Run pylint with colorized output
+
 
 
 

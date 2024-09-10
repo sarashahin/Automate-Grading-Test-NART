@@ -1,5 +1,16 @@
 # Automate-Grading-Test-NART
 
+
+An automated tool for grading the National Adult Reading Test (NART) using machine learning to assess cognitive ability through word pronunciation classification.
+
+[![Build Status](https://img.shields.io/travis/com/sarashahin/Automate-Grading-Test-NART.svg)](https://travis-ci.com/sarashahin/Automate-Grading-Test-NART) <br>
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
+
+
+## Project Overview
+
 This project focuses on the automated grading of premorbid ability tests, specifically reading tasks measured by the National Adult Reading Test (NART). 
 
 The goal is to classify the correct pronunciation of words to assess cognitive ability automatically.
@@ -11,7 +22,7 @@ The goal is to classify the correct pronunciation of words to assess cognitive a
 
 **Dataset**
 
-This project uses a dataset of audio samples where participants are asked to pronounce a list of 5o words by the National Adult Reading Test (NART). Each sample is labeled as either "correct" or "incorrect" based on the pronunciation accuracy.
+This project uses a dataset of audio samples where participants are asked to pronounce a list of 5o words by the National Adult Reading Test (NART). Each sample is labeled as either "correct(0)" or "incorrect(1)" based on the pronunciation accuracy.
 
 Note: The dataset is not publicly available. Please ensure you have the appropriate permissions to use the dataset or collect your own data for testing the model.
 

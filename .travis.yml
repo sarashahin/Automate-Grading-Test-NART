@@ -1,7 +1,7 @@
 language: python
 python:
   - "3.8"
-  - "3.9"  # Remove 3.10 if not necessary
+  - "3.9"  
 
 install:
   - python -m pip install --upgrade pip
